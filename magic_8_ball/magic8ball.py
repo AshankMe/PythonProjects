@@ -1,5 +1,5 @@
-import random 
-import sys
+from random import choice 
+from sys import exit
 # MAGIC 8 BALL
 print("Welcome to the Magic 8 ball!")
 print("In this code, you can ask a question to the computer, and it will give you the answer!")
@@ -12,8 +12,8 @@ def respond():
     global u_question
     u_question = str(input("What is the question you want to ask the ball?"))
     global ai_response
-    ai_response = random.choice(answer_list)
+    ai_response = choice(answer_list)
     print("The Ball Says: ", ai_response)
 
 respond()
-sys.exit()
+exit()
