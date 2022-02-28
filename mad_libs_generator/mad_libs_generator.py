@@ -1,0 +1,13 @@
+print('Hello! This page allows you to generate mad-libs.')
+print('-------------------------------------------------')
+
+us1 = input('Any sort of food: ')
+us2 = input('Somebodys Name:')
+us3 = input('Something Techy:')
+us4 = input('A color:')
+sentence1 = print("The alien's ship was a",us1,'.')
+sentence2 = print('It was named',us2,'.')
+sentence3 = print('His favorite food was',us3,'.')
+sentence4 = print('And its skin color was',us4,'.')
+print('')
+print('There are your mad libs!')
