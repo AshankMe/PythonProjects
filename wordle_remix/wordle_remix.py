@@ -87,19 +87,26 @@ def wordle():
     print('---') 
     
     if first_status == True:
-        first_letter_n2 = word_first_letter
-    else:
-        first_letter_n2 = input()
-    if first_status and second_status and third_status and fourth_status and fifth_status == True:
-        print('You got the word!')
+        first_letter_n2 = word_second_letter
+        first_letter_n3 = word_second_letter
+        first_letter_n4 = word_second_letter
+        first_letter_n5 = word_second_letter
     if second_status == True:
         second_letter_n2 = word_second_letter
-    if third_status == True:
+        second_letter_n3 = word_second_letter
+        second_letter_n4 = word_second_letter
+        second_letter_n5 = word_second_letter
+    elif third_status == True:
         third_letter_n2 = word_third_letter
-    if fourth_status == True:
+        third_letter_n3 = word_third_letter
+        third_letter_n4 = word_third_letter
+        third_letter_n5 = word_third_letter
+    elif fourth_status == True:
         fourth_letter_n2 = word_fourth_letter
-    if fifth_status == True:
+    elif fifth_status == True:
         fifth_letter_n2 = word_fifth_letter
+    elif first_status and second_status and third_status and fourth_status and fifth_status == True:
+        print('You got the word!')
     
     
     
