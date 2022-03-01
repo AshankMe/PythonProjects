@@ -1,9 +1,11 @@
 # Remix of Wordle
 from random import choice 
 from words import words
+from pygame.time import wait as w# stupid pygame
 
 print("Welcome to the Wordle Remix!")
 print("In this game, a word will be selected, and you will have to guess what it is!")
+w(2000)
 print("There will be hints along the way, such as the program informing you when you have a letter in the right position, or a letter that is misplaced.")
 print('----------------------------------------------------------------------')
 def wordle():
@@ -30,6 +32,7 @@ def wordle():
     print('------------------------------------------')
     # First Letter Section
     if first_letter.lower() == word_first_letter:
+        first_status = True   
         print(f'The first letter that you entered, {word_first_letter} is in the correct spot!') 
     elif first_letter.lower() != word_second_letter or word_third_letter or word_fourth_letter or word_fifth_letter or word_first_letter:
         print(f"The first letter that you entered, {first_letter} does not exist in the word.")
@@ -40,6 +43,7 @@ def wordle():
     print('---')
     # Second Letter Section
     if second_letter.lower() == word_second_letter:
+        second_status = True
         print(f'The second letter that you entered, {word_second_letter} is in the correct spot!') 
     elif second_letter.lower() != word_second_letter or word_third_letter or word_fourth_letter or word_fifth_letter or word_first_letter:
         print(f"The second letter that you entered, {second_letter} does not exist in the word.")
@@ -50,6 +54,7 @@ def wordle():
     print('---')
     # Third Letter Section
     if third_letter.lower() == word_third_letter:
+        third_status = True
         print(f'The third letter that you entered, {word_third_letter} is in the correct spot!') 
     elif third_letter.lower() != word_second_letter or word_third_letter or word_fourth_letter or word_fifth_letter or word_first_letter:
         print(f"The third letter that you entered, {third_letter} does not exist in the word.")
@@ -60,6 +65,7 @@ def wordle():
     print('---')
     # Fourth Letter Section
     if fourth_letter.lower() == word_fourth_letter:
+        fourth_status = True
         print(f'The fourth letter that you entered, {word_fourth_letter} is in the correct spot!') 
     elif fourth_letter.lower() != word_second_letter or word_third_letter or word_fourth_letter or word_fifth_letter or word_first_letter:
         print(f"The fourth letter that you entered, {fourth_letter} does not exist in the word.")
@@ -70,6 +76,7 @@ def wordle():
     print('---')
     # Fifth Letter Section
     if fifth_letter.lower() == word_fifth_letter:
+        fifth_status = True
         print(f'The fifth letter that you entered, {word_fifth_letter} is in the correct spot!') 
     elif fifth_letter.lower() != word_second_letter or word_third_letter or word_fourth_letter or word_fifth_letter or word_first_letter:
         print(f"The fifth letter that you entered, {fifth_letter} does not exist in the word.")
@@ -77,5 +84,23 @@ def wordle():
         print(f"The fifth letter that you entered, {fifth_letter} exists in the word, but is misplaced!")
     else:
         print("Program issue. Please try again!")
-    print('---')
+    print('---') 
+    
+    if first_status == True:
+        first_letter_n2 = word_first_letter
+    else:
+        first_letter_n2 = input()
+    if first_status and second_status and third_status and fourth_status and fifth_status == True:
+        print('You got the word!')
+    if second_status == True:
+        second_letter_n2 = word_second_letter
+    if third_status == True:
+        third_letter_n2 = word_third_letter
+    if fourth_status == True:
+        fourth_letter_n2 = word_fourth_letter
+    if fifth_status == True:
+        fifth_letter_n2 = word_fifth_letter
+    
+    
+    
 wordle()

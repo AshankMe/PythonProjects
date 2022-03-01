@@ -1,6 +1,3 @@
-
-
-
 fib_cache = {}
 def fibonacci(n):
     if n in fib_cache:
