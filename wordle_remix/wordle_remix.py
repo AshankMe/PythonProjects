@@ -103,10 +103,18 @@ def wordle():
         third_letter_n5 = word_third_letter
     elif fourth_status == True:
         fourth_letter_n2 = word_fourth_letter
+        fourth_letter_n3 = word_fourth_letter
+        fourth_letter_n4 = word_fourth_letter
+        fourth_letter_n5 = word_fourth_letter
     elif fifth_status == True:
         fifth_letter_n2 = word_fifth_letter
+        fifth_letter_n3 = word_fifth_letter
+        fifth_letter_n4 = word_fifth_letter
+        fifth_letter_n5 = word_fifth_letter
     elif first_status and second_status and third_status and fourth_status and fifth_status == True:
         print('You got the word!')
+    else:
+        print("You got no letter right this time! Try again!")
     
     
     
