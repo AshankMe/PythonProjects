@@ -11,4 +11,9 @@ print(dottedline)
 def game():
     gamewrd = choice(words)
     gameword = list(gamewrd)
-    
+    print('The word is {}'.format(gamewrd))
+    userinput_word = input("Guess a word: ")
+    userinput_wordlist = list(userinput_word)
+    if userinput_wordlist[0] == gameword[0]:
+        print("hi")
+game()
