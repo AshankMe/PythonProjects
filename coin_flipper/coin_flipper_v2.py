@@ -4,11 +4,12 @@ print("Welcome to Coin Flipper v2! This program flips a coin as many times as yo
 
 amount_of_flips = int(input("Enter the amount of flips: "))
 flip_count = 0
+list = ['yes', 'no']
 while flip_count < amount_of_flips:
-    choice = r.randint(0,1)
-    if choice == 0:
+    choice = r.choice(list)
+    if choice == 'yes':
         print("The coin landed on HEADS!")
-    elif choice == 1:
+    elif choice == 'no':
         print("The coin landed on TAILS!")
     else:
         print("Program Issue.")
