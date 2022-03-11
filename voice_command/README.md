@@ -1,7 +1,7 @@
 # Voice Command Python File
 
 
-Please excuse any microphone issues on your end pressuing this program to not work. 
+Please excuse any microphone issues on your end pressuring this program to not work. 
 
 You must turn on your volume for this to work, and your computer's default microphone should be running. 
 
