@@ -5,6 +5,7 @@ import playsound as p
 from webbrowser import open_new_tab as ont # put url here
 
 recog = sr.Recognizer()
+
 with sr.Microphone() as source:
     print("Speak!")
     audio = recog.listen(source)
@@ -18,12 +19,16 @@ except:
 def speak1(text1):
     language = 'en'
     speak = gTTS(text =  text1,lang = language, slow = False)
-    speak.save('Welcome.mp3')
+    
+ #   speak.save("C:\Users\ashan\OneDrive\Documents\GitHub\PythonProjects\voice_command\Welcome.mp3")
+  #  p.playsound('C:\Users\ashan\OneDrive\Documents\GitHub\PythonProjects\voice_command\Welcome.mp3')
+ 
+    
+    speak.save("Welcome.mp3")
     p.playsound('Welcome.mp3')
     
 if text == 'how are you':
     text1 = 'I am fine, what about you?'
-    #text1 = speech
     speak1(text1)
 
 
@@ -34,11 +39,11 @@ if text == 'Are you alive':
     text1 = 'No. I am a robot'
     speak1(text1)
 if text == 'turn off':
-    text1 = 'Ok. I am not yet capable of turning myself off, but you can do CTRL + S to save your code and then Alt + F4 to exit.'
+    text1 = 'Ok. I am not yet capable of turning myself off, but you ddcan do CTRL + S to save your code and then Alt + F4 to exit.'
     speak1(text1) 
-if text == 'who is your owner':
-    text1 = 'I am coded and created by AshankMe.'
-    speak1(text1)
 if text == 'how can i pass time in my class':
     text1 = 'try to pay attention because if you are engaged in the class it will go by faster'
+    speak1(text1)
+if text == 'hi jarvis':
+    text1 = 'hello'
     speak1(text1)
