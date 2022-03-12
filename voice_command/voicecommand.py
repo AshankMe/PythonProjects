@@ -3,7 +3,7 @@ from gtts import gTTS
 import os 
 import playsound as p
 from webbrowser import open_new_tab as ont # put url here
-
+text = ''
 recog = sr.Recognizer()
 
 with sr.Microphone() as source:
@@ -23,7 +23,7 @@ def speak1(text1):
  #   speak.save("C:\Users\ashan\OneDrive\Documents\GitHub\PythonProjects\voice_command\Welcome.mp3")
   #  p.playsound('C:\Users\ashan\OneDrive\Documents\GitHub\PythonProjects\voice_command\Welcome.mp3')
  
-    
+    print('test')
     speak.save("Welcome.mp3")
     p.playsound('Welcome.mp3')
     
@@ -47,3 +47,4 @@ if text == 'how can i pass time in my class':
 if text == 'hi jarvis':
     text1 = 'hello'
     speak1(text1)
+
