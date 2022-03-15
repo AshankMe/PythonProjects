@@ -1,4 +1,6 @@
 fib_cache = {}
+
+
 def fibonacci(n):
     if n in fib_cache:
         return fib_cache[n]
@@ -14,5 +16,6 @@ def fibonacci(n):
 
 repeat = int(input("How many numbers would you like to see?"))
 for n in range(1,repeat+1):
+    
     print(n, ':', fibonacci(n))
 print("Try not to overload!")
