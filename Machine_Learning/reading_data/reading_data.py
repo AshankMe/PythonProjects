@@ -44,3 +44,26 @@ X_tr, X_tst, Y_tr, Y_tst = tts(X, y, test_size=0.20, random_state=1)
 
 print(X_tr, Y_tr, X_tst, Y_tst)
 
+from sklearn import datasets, linear_model 
+from sklearn.svm import SVC
+model = SVC(gamma = 'auto')
+import sklearn.model_selection as ms
+
+results = ms.cross_val_score(model, X_tr, Y_tr, cv = 10, scoring = 'accuracy' )
+print(results)
+sum = 0
+for i in results:
+    sum = sum + i
+avg = sum/len(results)
+print('The average value is {}!'.format(avg))
+model.fit(X_tr, Y_tr)
+predictions = model.predict(X_tst)
+print('Prediction is {}'.format(predictions))
+print("Cross Check Y Test {}".format(Y_tst))
+plt.scatter(Y_tst, predictions)
+plt.xlabel('actual')
+plt.ylabel('predicted')
+x_lim = plt.xlim()
+y_lim = plt.ylim()
+plt.plot(x_lim, y_lim, 'k--')
+plt.show()
