@@ -14,6 +14,7 @@ def game():
     print('The word is {}'.format(gamewrd))
     userinput_word = input("Guess a word: ")
     userinput_wordlist = list(userinput_word)
+    # First Letter
     if userinput_wordlist[0] == gameword[0]:
         print("The first letter of the word you entered, {} is correct!".format(userinput_wordlist[0]))
     elif userinput_wordlist[0] == gameword[1] or gameword[2] or gameword[3] or gameword[4]:
@@ -22,5 +23,17 @@ def game():
         print("The first letter you entered, {} does not exist in the word.".format(userinput_wordlist[0]))
     else:
         print("Program Issue. Reboot!")
-            
+    # Second Letter
+    if userinput_wordlist[1] == gameword[1]:
+        print("The first letter of the word you entered, {} is correct!".format(userinput_wordlist[1]))
+    elif userinput_wordlist[0] == gameword[1] or gameword[2] or gameword[3] or gameword[4]:
+        print("The first letter you entered, {} exists in the word, but is misplaced!".format(userinput_wordlist[0]))
+    elif userinput_wordlist != gameword[0] or gameword[1] or gameword[2] or gameword[3] or gameword[4]:
+        print("The first letter you entered, {} does not exist in the word.".format(userinput_wordlist[0]))
+    else:
+        print("Program Issue. Reboot!")
+    
+    # Third Letter
+    # Fourth Letter
+    # Fifth Letter
 game()
