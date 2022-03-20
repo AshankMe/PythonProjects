@@ -43,19 +43,28 @@ from sklearn.model_selection import train_test_split as tts
 X_tr, X_tst, Y_tr, Y_tst = tts(X, y, test_size=0.20, random_state=1)
  
 print(X_tr, Y_tr, X_tst, Y_tst)
+model = []
 
-from sklearn import datasets, linear_model 
 from sklearn.svm import SVC
-model = SVC(gamma = 'auto')
+model.append(SVC(gamma = 'auto'))
+from sklearn.linear_model import LogisticRegression as lr
+model.append(lr(solver = 'liblinear', multi_class='ovr'))
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as lda
+model.append(lda())
+from sklearn.neighbors import KNeighborsClassifier as knc
+model.append(knc())
+from sklearn.naive_bayes import GaussianNB as gnb
+model.append(gnb())
 import sklearn.model_selection as ms
-
-results = ms.cross_val_score(model, X_tr, Y_tr, cv = 10, scoring = 'accuracy' )
-print(results)
-sum = 0
-for i in results:
-    sum = sum + i
-avg = sum/len(results)
-print('The average value is {}!'.format(avg))
+print(model)
+for i in model:
+    results = ms.cross_val_score(i, X_tr, Y_tr, cv = 10, scoring = 'accuracy' )
+    sum = 0
+    for j in results:
+        sum = sum + j
+    avg = sum/len(results)
+    print("The mean of 10 outcomes of accuracy result of" , i  , "is" , avg , "!")
+"""
 model.fit(X_tr, Y_tr)
 predictions = model.predict(X_tst)
 print('Prediction is {}'.format(predictions))
@@ -73,3 +82,4 @@ plt.plot(Y_tst, predictions)
 plt.xticks()
 plt.yticks()
 plt.show()
+"""
