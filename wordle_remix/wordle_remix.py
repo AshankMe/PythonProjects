@@ -35,7 +35,25 @@ def game():
         print("Program Issue. Reboot!")
     
     # Third Letter
+    if userinput_wordlist[2] == gameword[2]:
+        print("The third letter of the word you entered, {} is correct!".format(userinput_wordlist[2]))
+    elif userinput_wordlist != gameword[0] or gameword[1] or gameword[2] or gameword[3] or gameword[4]:
+        print("The third letter you entered, {} does not exist in the word.".format(userinput_wordlist[2]))
+    elif userinput_wordlist[1] == gameword[0] or gameword[1] or gameword[3] or gameword[4]:
+        print("The third letter you entered, {} exists in the word, but is misplaced!".format(userinput_wordlist[2]))
+    
+    else:
+        print("Program Issue. Reboot!")
     
     # Fourth Letter
+    if userinput_wordlist[3] == gameword[3]:
+        print("The fourth letter of the word you entered, {} is correct!".format(userinput_wordlist[3]))
+    elif userinput_wordlist != gameword[0] or gameword[1] or gameword[2] or gameword[3] or gameword[4]:
+        print("The fourth letter you entered, {} does not exist in the word.".format(userinput_wordlist[3]))
+    elif userinput_wordlist[1] == gameword[0] or gameword[2] or gameword[1] or gameword[4]:
+        print("The fourth letter you entered, {} exists in the word, but is misplaced!".format(userinput_wordlist[3]))
+    
+    else:
+        print("Program Issue. Reboot!")
     # Fifth Letter
 game()
