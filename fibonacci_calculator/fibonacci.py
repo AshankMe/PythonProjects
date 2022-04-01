@@ -18,4 +18,3 @@ repeat = int(input("How many numbers would you like to see?"))
 for n in range(1,repeat+1):
     
     print(n, ':', fibonacci(n))
-print("Try not to overload!")
