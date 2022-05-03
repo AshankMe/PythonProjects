@@ -7,7 +7,7 @@ def game():
     status = ''
     code_number = random.randrange(1000, 10000)
     code = list(map(int, str(code_number)))
-    # print(code_number) UNCOMMENT THIS FOR TESTING; IT SHOWS THE ANSWER 
+    print(code_number) #UNCOMMENT THIS FOR TESTING; IT SHOWS THE ANSWER 
 
     guess = ''
     completed_list = ["X"]*4
