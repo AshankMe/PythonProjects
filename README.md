@@ -31,4 +31,3 @@ All of these programs are made by me, and no one else.
 |Text To Speech|Has the user type in a sentence or word, and the computer says it out loud.|
 |Voice Command|Has the user say something, and then the computer respond.|
 |Wordle Remix|Remix of the Wordle game on the internet, coded by me.|
-|Machine Learning|Machine Learning files I am learning with.|
