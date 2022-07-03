@@ -9,7 +9,7 @@ target = input("Enter the target item --> ")
 count = 1
 target_found_count = 0
 count_list = []
-for i in array:
+for i in array: 
     if i == target:
         target_found_count += 1
         count_list.append(count)
@@ -17,5 +17,6 @@ for i in array:
     if count == total_count and target_found_count == 0:
         print("The target was not found in the array.")
         exit()
-print(f"The target was found {target_found_count} times.")
+print(f"The target was found {target_found_count} time(s).")
 print(f"The target was found at index: {count_list}")
+     
