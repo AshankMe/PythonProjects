@@ -9,7 +9,7 @@ amount_of_heads = 0 # determining amount of heads to start with
 flip_counter = 0
 if guess > amount_of_flips: # making sure that the guess is not higher than the amount of flips
     print("That is impossible! The guess suggests the coin will land on heads more than the coin is flipped. Please try again.")
-    print('-----------------------------------------------------------------') # diving line
+    print('-----------------------------------------------------------------') # dividubg line for orginization and visual attractivenessss
     exit() # terminating program
 while flip_counter < amount_of_flips: # creating while loop, making sure the coin is only flipped the amount of time the user wants it 
     # heads = 1
