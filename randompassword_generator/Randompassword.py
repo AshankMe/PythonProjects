@@ -13,8 +13,8 @@ if lcv == "Yes" or "yes":
     lower = string.ascii_lowercase
     total = total + lower
 if ucv == "Yes" or 'yes':
-    upper = string.ascii_uppercase
-    total = total + upper
+    lower = string.ascii_lowercase
+    total = total + lower
 if nv == "Yes" or 'yes':
     num = string.digits
     total = total + num
