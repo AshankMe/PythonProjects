@@ -9,12 +9,12 @@ symv = input("Would you like symbols in your password? Type Yes or No.")
 nv = input("Would you like numbers in your password? Type Yes or No.")
 #If statatements that affect the password according to the inputs
 total = ""
-if lcv == "Yes" or "yes":
+if lcv.lower() == "yes":
     lower = string.ascii_lowercase
     total = total + lower
-if ucv == "Yes" or 'yes':
-    lower = string.ascii_lowercase
-    total = total + lower
+if ucv.lower() == 'yes':
+    upper = string.ascii_uppercase
+    total = total + upper
 if nv == "Yes" or 'yes':
     num = string.digits
     total = total + num
